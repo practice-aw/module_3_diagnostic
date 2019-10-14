@@ -1,4 +1,5 @@
 class SearchFacade
+
   def initialize(house)
     @house = house
   end
@@ -21,5 +22,4 @@ class SearchFacade
   def potter_api_service
     PotterApiService.new(@house)
   end
-
 end

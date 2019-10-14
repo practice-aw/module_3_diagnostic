@@ -4,13 +4,15 @@ class PotterApiService
     @house = house
   end
 
-  def get_character_data
     # Is one of these two ways to get the json_response preffered, or is there another
     # way that I should be doing this?
+  def get_character_data
     json_response = conn.get("characters", {house: @house, orderOfThePhoenix: true})
     # json_response = conn.get("characters/?house=#{@house}&orderOfThePhoenix=true")
     parsed_data = JSON.parse(json_response.body, symbolize_names: true)
   end
+
+private
 
   def conn
     Faraday.new(

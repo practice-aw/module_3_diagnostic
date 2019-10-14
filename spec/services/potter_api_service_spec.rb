@@ -1,6 +1,5 @@
 require 'rails_helper'
 
-
 describe 'potter api service' do
   it "gets character info" do
 
@@ -12,5 +11,4 @@ describe 'potter api service' do
     expect(raw_data.last).to have_key(:role)
     expect(raw_data.first).to have_key(:house)
   end
-
 end
