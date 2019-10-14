@@ -3,8 +3,8 @@ class Character
 
   def initialize(character_hash)
     @name = character_hash[:name]
-    @role = character_hash[:role]
+    @role = character_hash[:role].presence || "none"
     @house = character_hash[:house]
-    @patronus = character_hash[:patronus]
+    @patronus = character_hash[:patronus].presence || "unknown"
   end
 end
