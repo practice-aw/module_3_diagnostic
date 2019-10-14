@@ -1,10 +1,12 @@
-<h3><%= @characters.count %> Members in house <%= @characters.first.house %>/h3>
+<% if @characters.count > 0 %>
+  <h3><%= @characters.count %> Members in house <%= @characters.first.house %>/h3>
+<% end %>
 
 <section class="characters">
   <% @characters.each do |character| %>
-    <p class="name"><%= character.name %></p>
-    <p class="role"><%= character.role %></p>
-    <p class="house"><%= character.house %></p>
-    <p class="patronus"><%= character.patronus %></p>
+    <p class="name">Name: <%= character.name %></p>
+    <p class="role">Role: <%= character.role %></p>
+    <p class="house">House: <%= character.house %></p>
+    <p class="patronus">Patronus: <%= character.patronus %></p>
   <% end %>
 </section>

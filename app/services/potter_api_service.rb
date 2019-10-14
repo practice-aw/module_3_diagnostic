@@ -6,7 +6,9 @@ class PotterApiService
 
   # refactor this
   def get_character_data
-    json_response = conn.get("characters/?house=#{@house}&orderOfThePhoenix=true")
+    # binding.pry
+    # json_response = conn.get("characters/?house=#{@house}&orderOfThePhoenix=true")
+    json_response = conn.get("characters", {house: @house, orderOfThePhoenix: true})
     parsed_data = JSON.parse(json_response.body, symbolize_names: true)
   end
 

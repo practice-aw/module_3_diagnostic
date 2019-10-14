@@ -7,8 +7,6 @@ describe 'potter api service' do
     service = PotterApiService.new('Gryffindor')
     raw_data = service.get_character_data
 
-    # binding.pry
-    expect(service).to be_a(PotterApiService)
     expect(raw_data).to be_a(Array)
     expect(raw_data.first).to have_key(:name)
     expect(raw_data.last).to have_key(:role)
