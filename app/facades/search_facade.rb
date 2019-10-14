@@ -1,3 +1,4 @@
+# app/facades/seach_facade.rb
 class SearchFacade
 
   def initialize(house)
