@@ -1,0 +1,10 @@
+<h3><%= @characters.count %> Results</h3>
+
+<section class="characters">
+  <% @characters.each do |character| %>
+    <p class="name"><%= character.name %></p>
+    <p class="role"><%= character.role %></p>
+    <p class="house"><%= character.house %></p>
+    <p class="patronus"><%= character.patronus %></p>
+  <% end %>
+</section>
