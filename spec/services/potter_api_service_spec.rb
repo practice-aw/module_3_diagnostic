@@ -11,7 +11,6 @@ describe 'potter api service' do
     expect(raw_data.first).to have_key(:name)
     expect(raw_data.last).to have_key(:role)
     expect(raw_data.first).to have_key(:house)
-    # expect(raw_data.first).to have_key(:patronus)
   end
 
 end
