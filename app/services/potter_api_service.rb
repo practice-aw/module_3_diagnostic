@@ -4,11 +4,11 @@ class PotterApiService
     @house = house
   end
 
-  # refactor this
   def get_character_data
-    # binding.pry
-    # json_response = conn.get("characters/?house=#{@house}&orderOfThePhoenix=true")
+    # Is one of these two ways to get the json_response preffered, or is there another
+    # way that I should be doing this?
     json_response = conn.get("characters", {house: @house, orderOfThePhoenix: true})
+    # json_response = conn.get("characters/?house=#{@house}&orderOfThePhoenix=true")
     parsed_data = JSON.parse(json_response.body, symbolize_names: true)
   end
 
