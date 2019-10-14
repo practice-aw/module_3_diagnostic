@@ -9,6 +9,11 @@ class PotterApiService
   def get_character_data
     json_response = conn.get("characters", {house: @house, orderOfThePhoenix: true})
     # json_response = conn.get("characters/?house=#{@house}&orderOfThePhoenix=true")
+    # conn.get do |req|
+    #   req.url = "characters"
+    #   req.params["house"] = @house
+    #   req.params["orderOfThePhoenix"] = true
+    # end
     parsed_data = JSON.parse(json_response.body, symbolize_names: true)
   end
 
